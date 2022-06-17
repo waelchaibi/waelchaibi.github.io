@@ -1,0 +1,21 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: gray;
+}
+
+.sublimetest{
+	text-decoration: underline;
+	font-weight: bold;
+	font-family: fantasy;
+	color: lightcyan;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: solid 3px;
+	padding: 300px;
+}

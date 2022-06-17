@@ -1,0 +1,238 @@
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Ocean-Station</title>
+    <link rel="stylesheet" href="decoration{.css">
+    <style>
+      body {
+        font-family: Italic, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('images/imageseif.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;  
+      }
+      .mySlides {display: none}
+      img {vertical-align: middle;}
+      
+      /* Slideshow container */
+      .slideshow-container {
+        display: block;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+        align-items: center;
+        width:100%;
+      }
+      
+      /* Next & previous buttons */
+      .prev, .next {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color: transparent;
+
+      }
+      
+      /* Position the "next button" to the right */
+      .next {
+        right: 250px;
+        border-radius: 3px 0 0 3px;
+ 
+      }
+      
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+      
+      
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      
+      .active, .dot:hover {
+        background-color: #717171;
+      }
+      
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev, .next,.text {font-size: 11px}
+      }
+      </style>
+  </head>
+    <body>
+      <header>
+        <a href="ocean.html"><img class="logo1" src="images/ocean.png" alt="logow"></a>
+        <nav>
+          <ul class="nav_links">
+              <li><a href="Tickets.html">Tickets</a></li>
+              <li><a href="#">Media</a></li>
+              <li><a href="#">Films</a></li>
+              <li><a href="Help.html">Help</a></li>
+              <li><a href="#">More</a></li>
+
+          </ul>
+        </nav>
+        <div style="display: inline-block;">
+          <button class="loginbutton">LogIn</button>
+          <span style="color:white">/</span>
+          <button class="loginbutton">CreateMyAccount</button>
+        </div>
+    </header>
+
+      <div class="slideshow-container" style="align-items: center;left: 150px;">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+        <img src="images/AFFICHE.png" style="width: 1000px;height: 400px;">
+
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="images/goku.jpg" style="width: 1000px;height: 400px;">
+
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="images/vegeta.jpg" style="width: 1000px;height: 400px;">
+
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+      <div class="moving">
+       <a href="https://www.instagram.com/bk_agency_tn/"> <img src="images/bk agency black.png" alt="" style=" width:140px;
+        height: 100px;
+        cursor: pointer;
+        background-color: transparent;"></a>
+        <button class="movingbutton">Get Tickets</button>
+      </div>
+        <p class="decoration" style="background-color: transparent;">We are here, the beautiful days of summer, we invite you to our
+          long-awaited event, one where everyone will be welcome, which
+          will pass here in Tunisia on July 27 at the Marina port - Hammamet
+          South.
+          Dear clients ! Equip yourself with your bathing suits because this
+          incredible adventure will take place in the middle of the sea not only
+          on One, but 7 yachts and 2 catamarans that will stray away, these floating castles will
+          will gather in the middle with the aim of providing you with a decorated space there
+          where you can swim.
+          We will provide you with a wonderful evening aboard the most comfortable
+          and the most surprising transport there is, without forgetting that
+          our professional crew who will be at your disposal from 12 p.m. until
+          8 p.m. to satisfy all your desires and watch you.
+          Come ! pamper yourself and let yourself be lulled by the music of
+          our 4 DJs who are none other than Daly faker, Momo Junior, Try-ky and Joss!!
+          come just to pamper your ears.
+          CARPE DIEM Friends!! life is far too short to deprive yourself
+          things we want so badly!! So Welcome!! Have fun
+          !!Enjoy and enjoy!! Believe us, you're definitely not going to
+          regret because it is the kind of adventure that will mark you for life !!</p>
+
+
+     <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      setInterval(function sliding(){
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+
+        showSlides(slideIndex+=1)
+      },3000);
+      function sliding(){
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+
+        showSlides(slideIndex+=1)
+      }
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+    </body>
+    <footer class="footer">
+        <div class="container">
+            <div class="row" id="cols">
+              <div class="footer-col">
+                <img class="logo1" src="images/ocean.png" alt="logow">
+              </div>
+              <div class="footer-col">
+                <input type="text" placeholder="Enter your email address"class="emailadd">
+                <a href="Form.html" class="getstarted">Get Started</a>
+              </div>
+              </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-col" id="sociaux">
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f" id="u"></i></a>
+            <a href="#"><i class="fab fa-instagram" id="d"></i></a>
+            <a href="#"><i class="fab fa-youtube" id="t"></i></a>
+          </div>
+    </footer>
+</html>
